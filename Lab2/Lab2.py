@@ -97,24 +97,3 @@ class FiniteAutomatonToRegularGrammar:
 
         S = self.fa.q0  # Start symbol is the initial state of the FA
         return Grammar(VN, VT, P, S)
-
-
-# Convertion from NFA to DFA
-
-
-
-
-
-
-#is_deterministic()
-"""
-for state in self.Q:: This loop iterates over each state in the set of states Q of the finite automaton.
-
-for symbol in self.Sigma:: Within the outer loop, another loop iterates over each symbol in the alphabet Sigma of the finite automaton.
-
-if len(self.Delta.get((state, symbol), [])) > 1:: Within the nested loops, it checks the length of the set of states that the finite automaton transitions to from the current state state on the input symbol symbol. Here, self.Delta.get((state, symbol), []) returns the set of next states for the transition from state on symbol. If the length of this set is greater than 1, it means that there are multiple possible transitions from state on symbol, violating the deterministic property.
-
-If the condition in the if statement is met at any point during the nested loops, return False is executed, indicating that the automaton is not deterministic.
-
-If the condition is never met, i.e., there is no state that has more than one transition on any input symbol, return True is executed at the end of the method, indicating that the automaton is deterministic.
-"""
